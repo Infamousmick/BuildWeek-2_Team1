@@ -37,6 +37,7 @@ textarea {
   font: inherit;
 }
 
+/*---- Topbar ----*/
 .topbar {
   width: 100%;
   padding: 24px 0 18px;
@@ -57,9 +58,34 @@ textarea {
   height: auto;
 }
 
-.topbar__nav {
+.topbar__nav__center {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.topbar__nav__center a {
+  padding: 10px 0;
+}
+
+.topbar__nav__center a.active {
+  border-bottom: 2px solid;
+}
+
+.topbar__nav__right {
   display: flex;
   align-items: center;
+}
+
+.topbar__nav__right a {
+  margin-right: 10px;
+}
+
+.topbar__nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
   gap: 18px;
 }
 
@@ -96,7 +122,149 @@ textarea {
   font-size: 28px;
 }
 
-.page {
+/*----- Searchbar -----*/
+header .search-bar {
+  background-color: white;
+  width: 700px;
+  max-width: 600px;
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 8px 10px;
+  border-radius: 35px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 25px 9px #CFCFCF5b;
+  box-shadow: 0px 0px 25px 9px #cfcfcf5b;
+  transition: all 0.5s linear;
+}
+
+header .search-section {
+  padding: 0 10px;
+  width: 25%;
+}
+
+header .search-section label,
+header .search-section input {
+  cursor: pointer;
+  width: 100%;
+}
+
+header .search-bar input {
+  border: 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+header .search-bar input:focus {
+  outline: 0;
+}
+
+header .search-bar i {
+  background-color: #E00B41;
+  width: 50px;
+  height: 50%;
+  display: flex;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+/*----- Searchbar shrink -----*/
+header .search-bar.shrink {
+  padding: 5px;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  width: 30%;
+}
+
+header .search-bar.shrink input {
+  display: none;
+}
+
+header .search-bar.shrink i {
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+
+/*----- Hero -----*/
+#hero {
+  background-image: url("../assets/imgs/home.jpg") !important;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+#hero p {
+  font-size: 2rem;
+}
+
+#hero a.btn {
+  background-color: white;
+  font-size: 1rem;
+}
+
+.liquid {
+  background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+  border: #646cff;
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+}
+
+#hero svg {
+  font-family: 'Russo One', sans-serif;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+#hero svg text {
+  text-transform: uppercase;
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #ffffff;
+  font-size: 110px;
+}
+
+/*---- Animazione per svg testo ----*/
+@keyframes stroke {
+  0% {
+    fill: rgba(211, 211, 211, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+
+  70% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgb(255, 255, 255);
+  }
+
+  80% {
+    fill: rgba(230, 230, 230, 0);
+    stroke: rgb(223, 223, 223);
+    stroke-width: 3;
+  }
+
+  100% {
+    fill: rgb(255, 255, 255);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+#last-page {
   max-width: 1140px;
   margin: 0 auto;
   padding: 18px 24px 80px;
@@ -446,6 +614,10 @@ textarea {
     position: static;
     max-width: 420px;
   }
+
+  .topbar__nav__center {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -471,10 +643,23 @@ textarea {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
+  #hero {
+    height: 300px;
+  }
+
+  .topbar__nav__center {
+    gap: 5px;
+  }
+
+  .topbar__nav__center a {
+    font-size: 0.75rem;
+  }
+
 }
 
 @media (max-width: 640px) {
-  .page {
+  #last-page {
     padding: 18px 16px 50px;
   }
 
@@ -502,5 +687,9 @@ textarea {
 
   .gallery__side img {
     height: 150px;
+  }
+
+  .search-bar {
+    display: none !important;
   }
 }

@@ -12,7 +12,7 @@ window.addEventListener('scroll', () => {
     }
 })
 
-const navLinks = document.querySelectorAll('#navbarNavLinks a')
+const navLinks = document.querySelectorAll('.topbar__nav__center a')
 
 /*============ algoritmo per aggiungere la classe active al click dei link della navbar ============*/
 navLinks.forEach((link, index)=>{
