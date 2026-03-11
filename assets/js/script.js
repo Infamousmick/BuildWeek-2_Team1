@@ -14,6 +14,7 @@ window.addEventListener('scroll', () => {
 
 const navLinks = document.querySelectorAll('#navbarNavLinks a')
 
+/*============ algoritmo per aggiungere la classe active al click dei link della navbar ============*/
 navLinks.forEach((link, index)=>{
     link.addEventListener("click", ()=>{
         if(!link.classList.contains('active')){
