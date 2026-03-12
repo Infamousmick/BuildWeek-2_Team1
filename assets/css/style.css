@@ -616,12 +616,16 @@ main div#home-page section div.card {
     align-items: center;
     background-color: transparent;
     cursor: pointer;
-    border: 0.1px solid white
+    border: 0.1px solid white;
+    transition: all 0.2s ease-in-out;
 }
 
 main div#home-page section div.card:hover {
     background-color: #e0dfdf;
-    border-color: rgba(200, 200, 200, 0.793)
+    border-color: rgba(200, 200, 200, 0.793);
+    box-shadow: 2px 2px 2px rgb(76, 76, 76);
+    border-radius: 10px;
+    scale: 1.05;
 }
 
 main div#home-page section div.card img {
@@ -641,12 +645,14 @@ main div#home-page section div.card-body {
 
 main div#home-page section div.card-body .card-title {
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.1rem;
 }
 
 main div#home-page section div.card-body .card-text {
-    font-size: 0.95em
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #4f4f4f
 }
 
 /*---- Footetr ----*/
