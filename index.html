@@ -1,445 +1,642 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb home</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Airbnb home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--=============== Bootstrap cdn ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
 
-  <!--=============== Bootstrap cdn ===============-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-  <header class="topbar">
-    <div class="topbar__inner">
-      <nav class="topbar__nav">
-        <div class="topbar__logo">
-          <img src="assets/imgs/logo-pink.png" alt="Airbnb logo" />
-        </div>
-        <ul class="topbar__nav__center">
-          <li><a href="#" class="active">Places to stay</a></li>
-          <li><a href="#">Experiences</a></li>
-          <li><a href="#">Online Experiences</a></li>
-
-        </ul>
-        <div class="topbar__nav__right">
-          <a href="#">Become a host</a>
-          <button class="icon-btn" aria-label="Language">
-            <i class="bi bi-globe"></i>
-          </button>
-
-          <div class="menu-profile">
-            <i class="bi bi-list"></i>
-            <i class="bi bi-person-circle"></i>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <nav class="topbar__nav">
+          <div class="topbar__logo">
+            <img src="assets/imgs/logo-pink.png" alt="Airbnb logo" />
           </div>
-        </div>
-      </nav>
-    </div>
-    <!--=============== Search bar ===============-->
-    <div class="search-bar d-flex justify-content-center align-items-center mb-3">
-      <div class="search-section d-flex flex-column">
-        <label for="search-destination" class="text-nowrap">Location</label>
-        <input type="text" class="text-truncate" id="search-destination" placeholder="Cerca destinazioni">
-      </div>
-      <div class="search-section d-flex flex-column">
-        <label for="search-date" class="text-nowrap">Check-in</label>
-        <input type="date" id="search-date" placeholder=" aggiungi date">
-      </div>
-      <div class="search-section d-flex flex-column">
-        <label for="search-date" class="text-nowrap">Check-out</label>
-        <input type="date" id="search-date" placeholder=" aggiungi date">
-      </div>
-      <div class="search-section d-flex flex-column">
-        <label for="search-for" class="text-nowrap">Guests</label>
-        <input type="number" class="text-truncate" id="search-for" placeholder=" Aggiungi ospiti1">
-      </div>
-      <i class="bi bi-search"></i>
-    </div>
-  </header>
+          <ul class="topbar__nav__center">
+            <li><a href="#" class="active">Places to stay</a></li>
+            <li><a href="#">Experiences</a></li>
+            <li><a href="#">Online Experiences</a></li>
+          </ul>
+          <div class="topbar__nav__right">
+            <a href="#">Become a host</a>
+            <button class="icon-btn" aria-label="Language">
+              <i class="bi bi-globe"></i>
+            </button>
 
-
-  <main>
-    <!--=============== Home Page ===============-->
-    <div class="" id="home-page">
-      <!--=============== Hero ===============-->
-      <div class="d-flex align-items-center" id="hero">
-        <div class="container-fluid px-4">
-          <div class="d-flex flex-column align-items-baseline">
-            <svg viewBox="0 0 800 110" class="mb-3 mb-md-5">
-              <text x="0%" y="100" d text-anchor="start">
-                Go near
-              </text>
-            </svg>
-            <a href="" class="btn fw-medium liquid"><span>Explore nearby stays</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="last-page" class="d-none">
-      <section class="listing-head">
-        <h1>Blarmor home</h1>
-
-        <div class="listing-meta-row">
-          <div class="listing-meta">
-            <span>4, 6 ratings</span>
-            <span class="dot">·</span>
-            <span>Inverness</span>
-          </div>
-
-          <div class="listing-actions">
-            <a href="#"><i class="bi bi-upload"></i> Share</a>
-            <a href="#"><i class="bi bi-heart"></i> Save</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery">
-        <div class="gallery__main">
-          <img src="assets/imgs/1.webp" alt="Main house image" />
-        </div>
-
-        <div class="gallery__side">
-          <img src="assets/imgs/2.webp" alt="House image 2" />
-          <img src="assets/imgs/3.webp" alt="House image 3" />
-          <img src="assets/imgs/4.webp" alt="House image 4" />
-          <img src="assets/imgs/5.webp" alt="House image 5" />
-        </div>
-      </section>
-
-      <section class="content-grid">
-        <div class="content-left">
-          <section class="intro">
-            <h2>House · Host: Erica</h2>
-            <p>3 rooms · Perfect place to visit the Loch Ness and go looking for Nessie.</p>
-            <a href="#">Show host details</a>
-          </section>
-
-          <section class="features">
-            <article class="feature">
-              <div class="feature__icon">
-                <i class="bi bi-house-door"></i>
-              </div>
-              <div class="feature__text">
-                <h3>House</h3>
-                <p>You will have the whole premise for you.</p>
-              </div>
-            </article>
-
-            <article class="feature">
-              <div class="feature__icon">
-                <i class="bi bi-stars"></i>
-              </div>
-              <div class="feature__text">
-                <h3>Advanced Cleaning Methods</h3>
-                <p>The host is committing to our 5-step cleaning process.</p>
-              </div>
-            </article>
-
-            <article class="feature">
-              <div class="feature__icon">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <div class="feature__text">
-                <h3>Inverness</h3>
-                <p>5 Kilmore Rd</p>
-              </div>
-            </article>
-
-            <article class="feature">
-              <div class="feature__icon">
-                <i class="bi bi-calendar3"></i>
-              </div>
-              <div class="feature__text">
-                <h3>Cancellation Terms And Fees</h3>
-                <p>Add your travel dates to know details about cancellation fees and terms.</p>
-              </div>
-            </article>
-
-            <article class="feature">
-              <div class="feature__icon">
-                <i class="bi bi-book"></i>
-              </div>
-              <div class="feature__text">
-                <h3>Rules Of The House</h3>
-                <p>It's forbidden to host parties, bring animals and smoke.</p>
-              </div>
-            </article>
-          </section>
-
-          <section class="review-form">
-            <div class="form-row">
-              <div class="field field--name">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter Name" />
-              </div>
-
-              <div class="field field--rating">
-                <label for="rating">Rating</label>
-                <select id="rating">
-                  <option>★</option>
-                  <option>★★</option>
-                  <option>★★★</option>
-                  <option>★★★★</option>
-                  <option>★★★★★</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="review">Review</label>
-              <textarea id="review" placeholder="Type in your review"></textarea>
-            </div>
-          </section>
-
-          <section class="reviews">
-            <article class="review">
-              <img src="assets/propic.png" alt="Noemi profile picture" />
-              <div class="review__body">
-                <h4>Noemi</h4>
-                <span>Jan 2021</span>
-                <p>
-                  Contrary to other reviews, I was cold and couldn't figure out how to turn on
-                  the heating...Otherwise amazing house.
-                </p>
-              </div>
-            </article>
-
-            <article class="review">
-              <img src="assets/propic.png" alt="Enrico profile picture" />
-              <div class="review__body">
-                <h4>Enrico</h4>
-                <span>Jan 2021</span>
-                <p>
-                  Amazing place. I've been here with my daughter to take pictures and we were
-                  not disappointed!
-                </p>
-              </div>
-            </article>
-          </section>
-        </div>
-
-        <aside class="booking-card">
-          <div class="booking-card__top">
-            <h3>Add dates to<br>see the prices</h3>
-            <div class="booking-card__rating">
-              <i class="bi bi-star-fill"></i>
-              <span>4.0, 6 reviews</span>
+            <div class="menu-profile">
+              <i class="bi bi-list"></i>
+              <i class="bi bi-person-circle"></i>
             </div>
           </div>
+        </nav>
+      </div>
+      <!--=============== Search bar ===============-->
+      <div
+        class="search-bar d-flex justify-content-center align-items-center mb-3"
+      >
+        <div class="search-section d-flex flex-column">
+          <label for="search-destination" class="text-nowrap">Location</label>
+          <input
+            type="text"
+            class="text-truncate"
+            id="search-destination"
+            placeholder="Cerca destinazioni"
+          />
+        </div>
+        <div class="search-section d-flex flex-column">
+          <label for="search-date" class="text-nowrap">Check-in</label>
+          <input type="date" id="search-date" placeholder=" aggiungi date" />
+        </div>
+        <div class="search-section d-flex flex-column">
+          <label for="search-date" class="text-nowrap">Check-out</label>
+          <input type="date" id="search-date" placeholder=" aggiungi date" />
+        </div>
+        <div class="search-section d-flex flex-column">
+          <label for="search-for" class="text-nowrap">Guests</label>
+          <input
+            type="number"
+            class="text-truncate"
+            id="search-for"
+            placeholder=" Aggiungi ospiti1"
+          />
+        </div>
+        <i class="bi bi-search"></i>
+      </div>
+    </header>
 
-          <div class="booking-box">
-            <div class="booking-box__dates">
-              <div class="booking-box__field">
-                <input type="text" placeholder="gg/mm/aaaa" />
-                <i class="bi bi-calendar3"></i>
-              </div>
-
-              <div class="booking-box__field">
-                <input type="text" placeholder="gg/mm/aaaa" />
-                <i class="bi bi-calendar3"></i>
-              </div>
-            </div>
-
-            <div class="booking-box__guests">
-              <input type="text" placeholder="Guests" />
-            </div>
-          </div>
-
-          <button class="booking-btn">Cancel Booking</button>
-        </aside>
-      </section>
-    </div>
-
-  </main>
-
-  <!--=============== Footer ===============-->
-  <footer class="pt-lg-8 pt-5 footer">
-    <div class="container mt-lg-2">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-
-          <div class="mb-4">
-            <img src="assets/imgs/logo-pink.png" alt="Geeks" class="logo-inverse w-25">
-            <div class="mt-4">
-              <!-- social media -->
-              <div class="fs-4 mt-4">
-                <!--Facebook-->
-                <a href="#" class="me-2">
-                  <i class="bi bi-facebook"></i>
-                  </svg>
-                </a>
-                <!--Twitter-->
-                <a href="#" class="me-2">
-                  <i class="bi bi-twitter"></i>
-                </a>
-                <!--Instagram-->
-                <a href="#">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </div>
+    <main>
+      <!--=============== Home Page ===============-->
+      <div class="" id="home-page">
+        <!--=============== Hero ===============-->
+        <div class="d-flex align-items-center" id="hero">
+          <div class="container-fluid px-4">
+            <div class="d-flex flex-column align-items-baseline">
+              <svg viewBox="0 0 800 110" class="mb-3 mb-md-5">
+                <text x="0%" y="100" d text-anchor="start">Go near</text>
+              </svg>
+              <a href="" class="btn fw-medium liquid"
+                ><span>Explore nearby stays</span></a
+              >
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-6">
-          <div class="mb-4">
-            <!-- list -->
-            <h3 class="fw-bold mx-3">Host</h3>
-            <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
-              <li><a href="#" class="nav-link">Apri un Airbnb</a></li>
-              <li><a href="#" class="nav-link">Proponi la tua esperienza su Airbnb</a></li>
-              <li><a href="#" class="nav-link">Proponi il tuo servizio su Airbnb</a></li>
-              <li><a href="#" class="nav-link">AirCover per gli host</a></li>
-              <li><a href="#" class="nav-link">Risorse per gli host</a></li>
-              <li><a href="#" class="nav-link">Forum della community</a></li>
-            </ul>
+
+        <!--=============== Section Cards ===============-->
+        <section class="container p-5">
+          <!--=== Row ===-->
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/1.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/2.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/1.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/2.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/1.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/2.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/1.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
+            <!--=== Col ===-->
+            <div class="col">
+              <div class="card">
+                <img src="assets/imgs/2.webp" class="card-img" alt="Place" />
+                <div class="card-body gap-2">
+                  <h5 class="card-title">Genova</h5>
+                  <p class="card-text">15 mins drive</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-6">
-          <div class="mb-4">
-            <!-- list -->
-            <h3 class="fw-bold mx-3">Support</h3>
-            <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
-              <li><a href="#" class="nav-link">Assistenza</a></li>
-              <li><a href="#" class="nav-link">Centro Assistenza</a></li>
-              <li><a href="#" class="nav-link">Ricevi assistenza per un problema legato alla sicurezza</a></li>
-              <li><a href="#" class="nav-link">AirCover</a></li>
-              <li><a href="#" class="nav-link">Supporto alla disabilità</a></li>
-              <li><a href="#" class="nav-link">Opzioni di cancellazione</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-12">
-          <!-- contact info -->
-          <div class="mb-4">
-            <h3 class="fw-bold mb-3">Get in touch</h3>
-            <p>339 McDermott Points Hettingerhaven, NV 15283</p>
-            <p class="mb-1">
-              Email:
-              <a href="#">airbnb@gmail.com</a>
-            </p>
-            <p>
-              Phone:
-              <span class="text-dark fw-semibold">(000) 123 456 789</span>
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
-      <div class="row align-items-center g-0 border-top py-2 mt-6">
-        <!-- Desc -->
-        <div class="col-md-10 col-12">
-          <div class="d-lg-flex align-items-center">
-            <div class="me-4">
-              <span>
-                ©
-                <span id="copyright5">
-                  <script>
-                    document.getElementById("copyright5").appendChild(document.createTextNode(new Date().getFullYear()));
-                  </script>
+
+      <div id="last-page" class="">
+        <section class="listing-head">
+          <h1>Blarmor home</h1>
+
+          <div class="listing-meta-row">
+            <div class="listing-meta">
+              <span>4, 6 ratings</span>
+              <span class="dot">·</span>
+              <span>Inverness</span>
+            </div>
+
+            <div class="listing-actions">
+              <a href="#"><i class="bi bi-upload"></i> Share</a>
+              <a href="#"><i class="bi bi-heart"></i> Save</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery">
+          <div class="gallery__main">
+            <img src="assets/imgs/1.webp" alt="Main house image" />
+          </div>
+
+          <div class="gallery__side">
+            <img src="assets/imgs/2.webp" alt="House image 2" />
+            <img src="assets/imgs/3.webp" alt="House image 3" />
+            <img src="assets/imgs/4.webp" alt="House image 4" />
+            <img src="assets/imgs/5.webp" alt="House image 5" />
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="content-left">
+            <section class="intro">
+              <h2>House · Host: Erica</h2>
+              <p>
+                3 rooms · Perfect place to visit the Loch Ness and go looking
+                for Nessie.
+              </p>
+              <a href="#">Show host details</a>
+            </section>
+
+            <section class="features">
+              <article class="feature">
+                <div class="feature__icon">
+                  <i class="bi bi-house-door"></i>
+                </div>
+                <div class="feature__text">
+                  <h3>House</h3>
+                  <p>You will have the whole premise for you.</p>
+                </div>
+              </article>
+
+              <article class="feature">
+                <div class="feature__icon">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <div class="feature__text">
+                  <h3>Advanced Cleaning Methods</h3>
+                  <p>The host is committing to our 5-step cleaning process.</p>
+                </div>
+              </article>
+
+              <article class="feature">
+                <div class="feature__icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="feature__text">
+                  <h3>Inverness</h3>
+                  <p>5 Kilmore Rd</p>
+                </div>
+              </article>
+
+              <article class="feature">
+                <div class="feature__icon">
+                  <i class="bi bi-calendar3"></i>
+                </div>
+                <div class="feature__text">
+                  <h3>Cancellation Terms And Fees</h3>
+                  <p>
+                    Add your travel dates to know details about cancellation
+                    fees and terms.
+                  </p>
+                </div>
+              </article>
+
+              <article class="feature">
+                <div class="feature__icon">
+                  <i class="bi bi-book"></i>
+                </div>
+                <div class="feature__text">
+                  <h3>Rules Of The House</h3>
+                  <p>
+                    It's forbidden to host parties, bring animals and smoke.
+                  </p>
+                </div>
+              </article>
+            </section>
+
+            <section class="review-form">
+              <div class="form-row">
+                <div class="field field--name">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Enter Name" />
+                </div>
+
+                <div class="field field--rating">
+                  <label for="rating">Rating</label>
+                  <select id="rating">
+                    <option>★</option>
+                    <option>★★</option>
+                    <option>★★★</option>
+                    <option>★★★★</option>
+                    <option>★★★★★</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="review">Review</label>
+                <textarea
+                  id="review"
+                  placeholder="Type in your review"
+                ></textarea>
+              </div>
+            </section>
+
+            <section class="reviews">
+              <article class="review">
+                <img src="assets/propic.png" alt="Noemi profile picture" />
+                <div class="review__body">
+                  <h4>Noemi</h4>
+                  <span>Jan 2021</span>
+                  <p>
+                    Contrary to other reviews, I was cold and couldn't figure
+                    out how to turn on the heating...Otherwise amazing house.
+                  </p>
+                </div>
+              </article>
+
+              <article class="review">
+                <img src="assets/propic.png" alt="Enrico profile picture" />
+                <div class="review__body">
+                  <h4>Enrico</h4>
+                  <span>Jan 2021</span>
+                  <p>
+                    Amazing place. I've been here with my daughter to take
+                    pictures and we were not disappointed!
+                  </p>
+                </div>
+              </article>
+            </section>
+          </div>
+
+          <aside class="booking-card">
+            <div class="booking-card__top">
+              <h3>Add dates to<br />see the prices</h3>
+              <div class="booking-card__rating">
+                <i class="bi bi-star-fill"></i>
+                <span>4.0, 6 reviews</span>
+              </div>
+            </div>
+
+            <div class="booking-box">
+              <div class="booking-box__dates">
+                <div class="booking-box__field">
+                  <input type="text" placeholder="gg/mm/aaaa" />
+                  <i class="bi bi-calendar3"></i>
+                </div>
+
+                <div class="booking-box__field">
+                  <input type="text" placeholder="gg/mm/aaaa" />
+                  <i class="bi bi-calendar3"></i>
+                </div>
+              </div>
+
+              <div class="booking-box__guests">
+                <input type="text" placeholder="Guests" />
+              </div>
+            </div>
+
+            <button class="booking-btn">Cancel Booking</button>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <!--=============== Footer ===============-->
+    <footer class="pt-lg-8 pt-5 footer">
+      <div class="container mt-lg-2">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="mb-4">
+              <img
+                src="assets/imgs/logo-pink.png"
+                alt="Geeks"
+                class="logo-inverse w-25"
+              />
+              <div class="mt-4">
+                <!-- social media -->
+                <div class="fs-4 mt-4">
+                  <!--Facebook-->
+                  <a href="#" class="me-2">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <!--Twitter-->
+                  <a href="#" class="me-2">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                  <!--Instagram-->
+                  <a href="#">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-6">
+            <div class="mb-4">
+              <!-- list -->
+              <h3 class="fw-bold mx-3">Host</h3>
+              <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
+                <li><a href="#" class="nav-link">Apri un Airbnb</a></li>
+                <li>
+                  <a href="#" class="nav-link"
+                    >Proponi la tua esperienza su Airbnb</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link"
+                    >Proponi il tuo servizio su Airbnb</a
+                  >
+                </li>
+                <li><a href="#" class="nav-link">AirCover per gli host</a></li>
+                <li><a href="#" class="nav-link">Risorse per gli host</a></li>
+                <li><a href="#" class="nav-link">Forum della community</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-6">
+            <div class="mb-4">
+              <!-- list -->
+              <h3 class="fw-bold mx-3">Support</h3>
+              <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
+                <li><a href="#" class="nav-link">Assistenza</a></li>
+                <li><a href="#" class="nav-link">Centro Assistenza</a></li>
+                <li>
+                  <a href="#" class="nav-link"
+                    >Ricevi assistenza per un problema legato alla sicurezza</a
+                  >
+                </li>
+                <li><a href="#" class="nav-link">AirCover</a></li>
+                <li>
+                  <a href="#" class="nav-link">Supporto alla disabilità</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Opzioni di cancellazione</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <!-- contact info -->
+            <div class="mb-4">
+              <h3 class="fw-bold mb-3">Get in touch</h3>
+              <p>339 McDermott Points Hettingerhaven, NV 15283</p>
+              <p class="mb-1">
+                Email:
+                <a href="#">airbnb@gmail.com</a>
+              </p>
+              <p>
+                Phone:
+                <span class="text-dark fw-semibold">(000) 123 456 789</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center g-0 border-top py-2 mt-6">
+          <!-- Desc -->
+          <div class="col-md-10 col-12">
+            <div class="d-lg-flex align-items-center">
+              <div class="me-4">
+                <span>
+                  ©
+                  <span id="copyright5">
+                    <script>
+                      document
+                        .getElementById("copyright5")
+                        .appendChild(
+                          document.createTextNode(new Date().getFullYear()),
+                        );
+                    </script>
+                  </span>
                 </span>
-              </span>
-            </div>
-            <div>
-              <nav class="nav nav-footer">
-                <a class="nav-link ps-0" href="#">Privacy Policy</a>
-                <a class="nav-link px-2 px-md-3" href="#">Cookie Notice</a>
-                <a class="nav-link d-none d-lg-block" href="#">Do Not Sell My Personal Information</a>
-                <a class="nav-link" href="#">Terms of Use</a>
-              </nav>
+              </div>
+              <div>
+                <nav class="nav nav-footer">
+                  <a class="nav-link ps-0" href="#">Privacy Policy</a>
+                  <a class="nav-link px-2 px-md-3" href="#">Cookie Notice</a>
+                  <a class="nav-link d-none d-lg-block" href="#"
+                    >Do Not Sell My Personal Information</a
+                  >
+                  <a class="nav-link" href="#">Terms of Use</a>
+                </nav>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Links -->
-        <div class="col-12 col-md-2 d-md-flex justify-content-end">
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle text-body" id="dropdownMenuLink" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="fe fe-globe me-2 align-middle"></i>
-              Language
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li>
-                <a class="dropdown-item" href="#">
-                  <span class="me-2">
-                    <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_5543_19736)">
-                        <path d="M0 0.5H16V12.5H0V0.5Z" fill="#012169"></path>
-                        <path
-                          d="M1.875 0.5L7.975 5.025L14.05 0.5H16V2.05L10 6.525L16 10.975V12.5H14L8 8.025L2.025 12.5H0V11L5.975 6.55L0 2.1V0.5H1.875Z"
-                          fill="white"></path>
-                        <path
-                          d="M10.6 7.525L16 11.5V12.5L9.225 7.525H10.6ZM6 8.025L6.15 8.9L1.35 12.5H0L6 8.025ZM16 0.5V0.575L9.775 5.275L9.825 4.175L14.75 0.5H16ZM0 0.5L5.975 4.9H4.475L0 1.55V0.5Z"
-                          fill="#C8102E"></path>
-                        <path d="M6.025 0.5V12.5H10.025V0.5H6.025ZM0 4.5V8.5H16V4.5H0Z" fill="white"></path>
-                        <path d="M0 5.325V7.725H16V5.325H0ZM6.825 0.5V12.5H9.225V0.5H6.825Z" fill="#C8102E"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5543_19736">
-                          <rect width="16" height="12" fill="white" transform="translate(0 0.5)"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </span>
-                  English
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <span class="me-2">
-                    <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_5543_19744)">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H16V12.5H0V0.5Z" fill="white"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H5.3325V12.5H0V0.5Z" fill="#002654">
-                        </path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.668 0.5H16.0005V12.5H10.668V0.5Z"
-                          fill="#CE1126"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5543_19744">
-                          <rect width="16" height="12" fill="white" transform="translate(0 0.5)"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </span>
-                  Français
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <span class="me-2">
-                    <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_5543_19751)">
-                        <path d="M0 8.5H16V12.5H0V8.5Z" fill="#FFCE00"></path>
-                        <path d="M0 0.5H16V4.5H0V0.5Z" fill="black"></path>
-                        <path d="M0 4.5H16V8.5H0V4.5Z" fill="#DD0000"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_5543_19751">
-                          <rect width="16" height="12" fill="white" transform="translate(0 0.5)"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </span>
-                  Deutsch
-                </a>
-              </li>
-            </ul>
+          <!-- Links -->
+          <div class="col-12 col-md-2 d-md-flex justify-content-end">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle text-body"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fe fe-globe me-2 align-middle"></i>
+                Language
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="me-2">
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_5543_19736)">
+                          <path d="M0 0.5H16V12.5H0V0.5Z" fill="#012169"></path>
+                          <path
+                            d="M1.875 0.5L7.975 5.025L14.05 0.5H16V2.05L10 6.525L16 10.975V12.5H14L8 8.025L2.025 12.5H0V11L5.975 6.55L0 2.1V0.5H1.875Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M10.6 7.525L16 11.5V12.5L9.225 7.525H10.6ZM6 8.025L6.15 8.9L1.35 12.5H0L6 8.025ZM16 0.5V0.575L9.775 5.275L9.825 4.175L14.75 0.5H16ZM0 0.5L5.975 4.9H4.475L0 1.55V0.5Z"
+                            fill="#C8102E"
+                          ></path>
+                          <path
+                            d="M6.025 0.5V12.5H10.025V0.5H6.025ZM0 4.5V8.5H16V4.5H0Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M0 5.325V7.725H16V5.325H0ZM6.825 0.5V12.5H9.225V0.5H6.825Z"
+                            fill="#C8102E"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_5543_19736">
+                            <rect
+                              width="16"
+                              height="12"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    English
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="me-2">
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_5543_19744)">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0.5H16V12.5H0V0.5Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0.5H5.3325V12.5H0V0.5Z"
+                            fill="#002654"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.668 0.5H16.0005V12.5H10.668V0.5Z"
+                            fill="#CE1126"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_5543_19744">
+                            <rect
+                              width="16"
+                              height="12"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    Français
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="me-2">
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_5543_19751)">
+                          <path d="M0 8.5H16V12.5H0V8.5Z" fill="#FFCE00"></path>
+                          <path d="M0 0.5H16V4.5H0V0.5Z" fill="black"></path>
+                          <path d="M0 4.5H16V8.5H0V4.5Z" fill="#DD0000"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_5543_19751">
+                            <rect
+                              width="16"
+                              height="12"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    Deutsch
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="assets/js/script.js"></script>
-</body>
-
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

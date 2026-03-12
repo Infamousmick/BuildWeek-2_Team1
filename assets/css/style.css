@@ -602,17 +602,66 @@ header .search-bar.shrink i {
     max-width: 370px;
 }
 
+/*---- Main ----*/
+
+/*### Section cards ###*/
+main div#home-page section {
+    /* padding: 18px 16px; */
+}
+
+main div#home-page section div.card {
+    --bs-card-border-width: 0;
+    --bs-card-title-spacer-y: 0rem;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0.1px solid white
+}
+
+main div#home-page section div.card:hover {
+    background-color: #e0dfdf;
+    border-color: rgba(200, 200, 200, 0.793)
+}
+
+main div#home-page section div.card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+main div#home-page section div.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 1rem;
+}
+
+main div#home-page section div.card-body .card-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+main div#home-page section div.card-body .card-text {
+    font-size: 0.95em
+}
 
 /*---- Footetr ----*/
-footer a{
-    color:#717171!important;
+footer a {
+    color: #717171 !important;
 }
-footer a:hover{
+
+footer a:hover {
     color: #222 !important;
 }
-footer a.nav-link:hover{
+
+footer a.nav-link:hover {
     text-decoration: underline;
 }
+
 @media (max-width: 1100px) {
     .content-grid {
         grid-template-columns: 1fr;
@@ -628,7 +677,7 @@ footer a.nav-link:hover{
         gap: 10px;
     }
 
-    .search-bar{
+    .search-bar {
         width: 600px !important;
     }
 }
@@ -669,7 +718,7 @@ footer a.nav-link:hover{
         font-size: 0.75rem;
     }
 
-    .search-bar{
+    .search-bar {
         width: 400px !important;
     }
 }
@@ -704,15 +753,16 @@ footer a.nav-link:hover{
     .gallery__side img {
         height: 150px;
     }
-    
-    .search-bar{
+
+    .search-bar {
         transform: scale(0.8);
         position: absolute;
         top: 2%;
         left: 0;
         right: 0;
     }
-    .search-bar input{
+
+    .search-bar input {
         display: none !important;
     }
 }
